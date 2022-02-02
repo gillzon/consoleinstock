@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    {% block content %}
+    <h1>XBOX Series X Lagerstatus</h1>
+    NetOnNet: <a target="_blank" href="{{netonnet_url}}">{{netonnet}}</a>
+    <br>
+    Elgiganten: <a target="_blank" href="{{elgiganten_url}}">{{elgiganten}}</a>
+    <br>
+    Kjell: <a target="_blank" href="{{kjell_url}}">{{kjell}}</a>
+    <br>
+    Komplett: <a target="_blank" href="{{komplett_url}}">{{komplett}}</a>
+    {% endblock %}
+</body>
+
+</html>
