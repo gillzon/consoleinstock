@@ -11,13 +11,13 @@
 <body>
     {% block content %}
     <h1>XBOX Series X Lagerstatus</h1>
-    NetOnNet: <a target="_blank" href="{{netonnet_url}}">{{netonnet}}</a>
+    NetOnNet: <a target="_blank" href="{{netonnet_url}}">{% for k in netonnet%}{{k.message}}</a> Uppdaterad: {{k.created_at}}{% endfor %}
     <br>
-    Elgiganten: <a target="_blank" href="{{elgiganten_url}}">{{elgiganten}}</a>
+    Elgiganten: <a target="_blank" href="{{elgiganten_url}}">{% for k in elgiganten%}{{k.message}}</a> Uppdaterad: {{k.created_at}}{% endfor %}
     <br>
-    Kjell: <a target="_blank" href="{{kjell_url}}">{{kjell}}</a>
+    Kjell: <a target="_blank" href="{{kjell_url}}">{% for k in kjell%}{{k.message}}</a> Uppdaterad: {{k.created_at}}{% endfor %}
     <br>
-    Komplett: <a target="_blank" href="{{komplett_url}}">{{komplett}}</a>
+    Komplett: <a target="_blank" href="{{komplett_url}}">{% for k in komplett%}{{k.message}}</a> Uppdaterad: {{k.created_at}}{% endfor %}
     {% endblock %}
 </body>
 

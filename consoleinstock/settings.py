@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CRONJOBS = [
+    ('*/5 * * * *', 'api.cron.runcronjob', '>> /var/log/crontab.log')
+]
 
 # Application definition
 
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
