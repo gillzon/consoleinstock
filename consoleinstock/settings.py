@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5d$+wkdq68np6dl)lan*!sh71x6u_lmesp^74vd$ew5yitwhzg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 CRONJOBS = [
     ('*/5 * * * *', 'api.cron.runcronjob', '>> /var/log/crontab.log')
